@@ -23,7 +23,9 @@ public class MainViewController: UIViewController {
     }
 
     @IBAction func submitNumberInput() {
-        generatedFactors = generator!.generate(1)
+        var inputString = numberTextField.text
+        var inputAsInteger = inputString.toInt()
+        generatedFactors = generator!.generate(inputAsInteger!)
     }
 
 }

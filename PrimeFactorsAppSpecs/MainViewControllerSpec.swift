@@ -12,14 +12,16 @@ import Nimble
 
 class MockPrimeFactorsGenerator: FactorsGenerator {
     var generateWasCalled: Bool
+    var results: [Int]
 
     init() {
         self.generateWasCalled = false
+        self.results = [Int]()
     }
 
     func generate(number: Int) -> [Int] {
         self.generateWasCalled = true
-        return [Int]()
+        return self.results
     }
 }
 
@@ -36,24 +38,33 @@ class MainViewControllerSpec: QuickSpec {
             }
 
             describe("Submitting input from the text field") {
-                var controller: MainViewController?
-                var generator: MockPrimeFactorsGenerator?
+                var controller = MainViewController()
+                var generator = MockPrimeFactorsGenerator()
+                var textField = UITextField()
 
                 beforeEach {
                     controller = MainViewController()
                     generator = MockPrimeFactorsGenerator()
-                    controller!.generator = generator
+                    textField = UITextField()
+                    controller.generator = generator
+                    controller.numberTextField = textField
                 }
 
                 it("delegates to the generator") {
-                    controller!.submitNumberInput()
+                    controller.numberTextField.text = "2"
 
-                    expect(generator!.generateWasCalled).to(beTrue())
+                    controller.submitNumberInput()
+
+                    expect(generator.generateWasCalled).to(beTrue())
                 }
 
-                it("stores the generated prime factors") {
-                    controller!.submitNumberInput()
-                    expect(controller!.generatedFactors).toNot(beNil())
+                it("stores the correct generated prime factors") {
+                    controller.numberTextField.text = "2"
+                    controller.generator = PrimeFactorsGenerator()
+
+                    controller.submitNumberInput()
+
+                    expect(controller.generatedFactors).to(equal([2]))
                 }
             }
         }
