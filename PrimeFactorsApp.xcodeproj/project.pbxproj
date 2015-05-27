@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C4A2D9939C9031F22B43AD6 /* Pods_PrimeFactorsAppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FF449D741B1614FD00716080 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF449D731B1614FD00716080 /* TestSpec.swift */; };
+		FF449D751B1614FD00716080 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF449D731B1614FD00716080 /* TestSpec.swift */; };
 		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
 		FF858E741B161328001EDB59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E731B161328001EDB59 /* ViewController.swift */; };
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
@@ -29,6 +31,7 @@
 		1AE318D6666694D9CBFACB39 /* Pods-PrimeFactorsAppSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactorsAppSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.debug.xcconfig"; sourceTree = "<group>"; };
+		FF449D731B1614FD00716080 /* TestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSpec.swift; sourceTree = "<group>"; };
 		FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E701B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF858E711B161328001EDB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +39,7 @@
 		FF858E761B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF858E781B161328001EDB59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF858E7B1B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PrimeFactorsAppTests.xctest; path = PrimeFactorsAppSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF858E811B161328001EDB59 /* PrimeFactorsAppSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactorsAppSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E861B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */,
-				FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */,
+				FF858E811B161328001EDB59 /* PrimeFactorsAppSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				FF858E851B161328001EDB59 /* Supporting Files */,
+				FF449D731B1614FD00716080 /* TestSpec.swift */,
 			);
-			name = PrimeFactorsAppSpecs;
-			path = PrimeFactorsAppTests;
+			path = PrimeFactorsAppSpecs;
 			sourceTree = "<group>";
 		};
 		FF858E851B161328001EDB59 /* Supporting Files */ = {
@@ -172,7 +175,7 @@
 			);
 			name = PrimeFactorsAppSpecs;
 			productName = PrimeFactorsAppTests;
-			productReference = FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */;
+			productReference = FF858E811B161328001EDB59 /* PrimeFactorsAppSpecs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF858E741B161328001EDB59 /* ViewController.swift in Sources */,
+				FF449D741B1614FD00716080 /* TestSpec.swift in Sources */,
 				FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF449D751B1614FD00716080 /* TestSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +440,7 @@
 			baseConfigurationReference = F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -446,6 +452,7 @@
 				INFOPLIST_FILE = PrimeFactorsAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimeFactorsApp.app/PrimeFactorsApp";
 			};
 			name = Debug;
@@ -455,6 +462,7 @@
 			baseConfigurationReference = 1AE318D6666694D9CBFACB39 /* Pods-PrimeFactorsAppSpecs.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
