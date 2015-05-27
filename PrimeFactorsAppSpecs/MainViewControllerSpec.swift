@@ -10,6 +10,14 @@ import Foundation
 import Quick
 import Nimble
 
+class MockPrimeFactorsGenerator: FactorsGenerator {
+    var generateWasCalled = false
+
+    func generate(number: Int) -> [Int] {
+        generateWasCalled = true
+    }
+}
+
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("home view controller") {
