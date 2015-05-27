@@ -27,6 +27,14 @@ class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("home view controller") {
 
+            describe("Loading the view") {
+                it("builds a generator") {
+                    let controller = MainViewController()
+                    controller.viewDidLoad()
+                    expect(controller.generator).notTo(beNil())
+                }
+            }
+
             describe("submits input from the text field") {
                 it("delegates to the generator") {
                     let controller = MainViewController()

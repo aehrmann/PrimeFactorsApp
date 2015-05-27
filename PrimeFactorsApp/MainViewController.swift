@@ -16,6 +16,11 @@ public class MainViewController: UIViewController {
 
     public var generator: FactorsGenerator?
 
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        generator = PrimeFactorsGenerator()
+    }
+
     @IBAction func submitNumberInput() {
         generator!.generate(1)
     }
