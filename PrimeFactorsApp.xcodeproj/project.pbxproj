@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
+		FF858E741B161328001EDB59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E731B161328001EDB59 /* ViewController.swift */; };
+		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
+		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
+		FF858E7C1B161328001EDB59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF858E7A1B161328001EDB59 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF858E821B161328001EDB59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF858E641B161328001EDB59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF858E6B1B161328001EDB59;
+			remoteInfo = PrimeFactorsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF858E701B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF858E711B161328001EDB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF858E731B161328001EDB59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF858E761B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF858E781B161328001EDB59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF858E7B1B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactorsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF858E861B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF858E691B161328001EDB59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF858E7E1B161328001EDB59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF858E631B161328001EDB59 = {
+			isa = PBXGroup;
+			children = (
+				FF858E6E1B161328001EDB59 /* PrimeFactorsApp */,
+				FF858E841B161328001EDB59 /* PrimeFactorsAppSpecs */,
+				FF858E6D1B161328001EDB59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF858E6D1B161328001EDB59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */,
+				FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF858E6E1B161328001EDB59 /* PrimeFactorsApp */ = {
+			isa = PBXGroup;
+			children = (
+				FF858E711B161328001EDB59 /* AppDelegate.swift */,
+				FF858E731B161328001EDB59 /* ViewController.swift */,
+				FF858E751B161328001EDB59 /* Main.storyboard */,
+				FF858E781B161328001EDB59 /* Images.xcassets */,
+				FF858E7A1B161328001EDB59 /* LaunchScreen.xib */,
+				FF858E6F1B161328001EDB59 /* Supporting Files */,
+			);
+			path = PrimeFactorsApp;
+			sourceTree = "<group>";
+		};
+		FF858E6F1B161328001EDB59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF858E701B161328001EDB59 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF858E841B161328001EDB59 /* PrimeFactorsAppSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				FF858E851B161328001EDB59 /* Supporting Files */,
+			);
+			name = PrimeFactorsAppSpecs;
+			path = PrimeFactorsAppTests;
+			sourceTree = "<group>";
+		};
+		FF858E851B161328001EDB59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF858E861B161328001EDB59 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF858E6B1B161328001EDB59 /* PrimeFactorsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF858E8B1B161328001EDB59 /* Build configuration list for PBXNativeTarget "PrimeFactorsApp" */;
+			buildPhases = (
+				FF858E681B161328001EDB59 /* Sources */,
+				FF858E691B161328001EDB59 /* Frameworks */,
+				FF858E6A1B161328001EDB59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrimeFactorsApp;
+			productName = PrimeFactorsApp;
+			productReference = FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF858E801B161328001EDB59 /* PrimeFactorsAppSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF858E8E1B161328001EDB59 /* Build configuration list for PBXNativeTarget "PrimeFactorsAppSpecs" */;
+			buildPhases = (
+				FF858E7D1B161328001EDB59 /* Sources */,
+				FF858E7E1B161328001EDB59 /* Frameworks */,
+				FF858E7F1B161328001EDB59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF858E831B161328001EDB59 /* PBXTargetDependency */,
+			);
+			name = PrimeFactorsAppSpecs;
+			productName = PrimeFactorsAppTests;
+			productReference = FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF858E641B161328001EDB59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = AriAndLisa;
+				TargetAttributes = {
+					FF858E6B1B161328001EDB59 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					FF858E801B161328001EDB59 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = FF858E6B1B161328001EDB59;
+					};
+				};
+			};
+			buildConfigurationList = FF858E671B161328001EDB59 /* Build configuration list for PBXProject "PrimeFactorsApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF858E631B161328001EDB59;
+			productRefGroup = FF858E6D1B161328001EDB59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF858E6B1B161328001EDB59 /* PrimeFactorsApp */,
+				FF858E801B161328001EDB59 /* PrimeFactorsAppSpecs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF858E6A1B161328001EDB59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF858E771B161328001EDB59 /* Main.storyboard in Resources */,
+				FF858E7C1B161328001EDB59 /* LaunchScreen.xib in Resources */,
+				FF858E791B161328001EDB59 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF858E7F1B161328001EDB59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF858E681B161328001EDB59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF858E741B161328001EDB59 /* ViewController.swift in Sources */,
+				FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF858E7D1B161328001EDB59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF858E831B161328001EDB59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF858E6B1B161328001EDB59 /* PrimeFactorsApp */;
+			targetProxy = FF858E821B161328001EDB59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF858E751B161328001EDB59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF858E761B161328001EDB59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF858E7A1B161328001EDB59 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF858E7B1B161328001EDB59 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF858E891B161328001EDB59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF858E8A1B161328001EDB59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF858E8C1B161328001EDB59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PrimeFactorsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF858E8D1B161328001EDB59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PrimeFactorsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FF858E8F1B161328001EDB59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PrimeFactorsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimeFactorsApp.app/PrimeFactorsApp";
+			};
+			name = Debug;
+		};
+		FF858E901B161328001EDB59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PrimeFactorsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimeFactorsApp.app/PrimeFactorsApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF858E671B161328001EDB59 /* Build configuration list for PBXProject "PrimeFactorsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF858E891B161328001EDB59 /* Debug */,
+				FF858E8A1B161328001EDB59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF858E8B1B161328001EDB59 /* Build configuration list for PBXNativeTarget "PrimeFactorsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF858E8C1B161328001EDB59 /* Debug */,
+				FF858E8D1B161328001EDB59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FF858E8E1B161328001EDB59 /* Build configuration list for PBXNativeTarget "PrimeFactorsAppSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF858E8F1B161328001EDB59 /* Debug */,
+				FF858E901B161328001EDB59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF858E641B161328001EDB59 /* Project object */;
+}
