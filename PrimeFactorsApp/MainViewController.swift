@@ -15,6 +15,7 @@ public class MainViewController: UIViewController {
     @IBOutlet weak var generateButton: UIButton!
 
     public var generator: FactorsGenerator?
+    public var generatedFactors: [Int]?
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,7 @@ public class MainViewController: UIViewController {
     }
 
     @IBAction func submitNumberInput() {
-        generator!.generate(1)
+        generatedFactors = generator!.generate(1)
     }
-
-
 
 }

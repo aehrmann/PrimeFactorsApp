@@ -35,15 +35,25 @@ class MainViewControllerSpec: QuickSpec {
                 }
             }
 
-            describe("submits input from the text field") {
+            describe("Submitting input from the text field") {
+                var controller: MainViewController?
+                var generator: MockPrimeFactorsGenerator?
+
+                beforeEach {
+                    controller = MainViewController()
+                    generator = MockPrimeFactorsGenerator()
+                    controller!.generator = generator
+                }
+
                 it("delegates to the generator") {
-                    let controller = MainViewController()
-                    let generator = MockPrimeFactorsGenerator()
-                    controller.generator = generator
+                    controller!.submitNumberInput()
 
-                    controller.submitNumberInput()
+                    expect(generator!.generateWasCalled).to(beTrue())
+                }
 
-                    expect(generator.generateWasCalled).to(beTrue())
+                it("stores the generated prime factors") {
+                    controller!.submitNumberInput()
+                    expect(controller!.generatedFactors).toNot(beNil())
                 }
             }
         }
