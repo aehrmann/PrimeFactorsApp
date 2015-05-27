@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3C4A2D9939C9031F22B43AD6 /* Pods_PrimeFactorsAppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		FF06EBA21B161984007EEDB3 /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA11B161984007EEDB3 /* HomeViewControllerSpec.swift */; };
+		FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */; };
+		FF06EBA61B161CAD007EEDB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */; };
+		FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */; };
 		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
 		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
@@ -29,7 +31,8 @@
 		1AE318D6666694D9CBFACB39 /* Pods-PrimeFactorsAppSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactorsAppSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.debug.xcconfig"; sourceTree = "<group>"; };
-		FF06EBA11B161984007EEDB3 /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
+		FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
+		FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E701B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF858E711B161328001EDB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 				FF858E781B161328001EDB59 /* Images.xcassets */,
 				FF858E7A1B161328001EDB59 /* LaunchScreen.xib */,
 				FF858E6F1B161328001EDB59 /* Supporting Files */,
+				FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */,
 			);
 			path = PrimeFactorsApp;
 			sourceTree = "<group>";
@@ -120,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FF858E851B161328001EDB59 /* Supporting Files */,
-				FF06EBA11B161984007EEDB3 /* HomeViewControllerSpec.swift */,
+				FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */,
 			);
 			path = PrimeFactorsAppSpecs;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */,
+				FF06EBA61B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF06EBA21B161984007EEDB3 /* HomeViewControllerSpec.swift in Sources */,
+				FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */,
+				FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

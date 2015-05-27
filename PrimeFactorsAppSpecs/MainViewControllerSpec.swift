@@ -10,8 +10,10 @@ import Foundation
 import Quick
 import Nimble
 
-class HomeViewControllerSpec: QuickSpec {
+class MainViewControllerSpec: QuickSpec {
     override func spec() {
+        describe("home view controller") {
 
+        }
     }
 }
