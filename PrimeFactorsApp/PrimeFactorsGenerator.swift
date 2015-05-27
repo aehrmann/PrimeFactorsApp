@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PrimeFactorsGenerator {
+class PrimeFactorsGenerator: FactorsGenerator {
     func generate(var number: Int) -> [Int] {
         var factors = [Int]()
         var currentFactor = 2

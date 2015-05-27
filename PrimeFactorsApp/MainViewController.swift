@@ -13,4 +13,5 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var numberTextField: UITextField!
 
+    @IBOutlet weak var generateButton: UIButton!
 }

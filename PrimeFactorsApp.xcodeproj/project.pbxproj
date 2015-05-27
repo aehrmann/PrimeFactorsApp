@@ -18,6 +18,8 @@
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
 		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
 		FF858E7C1B161328001EDB59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF858E7A1B161328001EDB59 /* LaunchScreen.xib */; };
+		FFF802271B1654F40070D501 /* FactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF802261B1654F40070D501 /* FactorsGenerator.swift */; };
+		FFF802281B1654F40070D501 /* FactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF802261B1654F40070D501 /* FactorsGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		FF858E7B1B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FF858E811B161328001EDB59 /* PrimeFactorsAppSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactorsAppSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E861B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF802261B1654F40070D501 /* FactorsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorsGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 				FF858E6F1B161328001EDB59 /* Supporting Files */,
 				FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */,
 				FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */,
+				FFF802261B1654F40070D501 /* FactorsGenerator.swift */,
 			);
 			path = PrimeFactorsApp;
 			sourceTree = "<group>";
@@ -297,6 +301,7 @@
 			files = (
 				FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */,
 				FF06EBAC1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
+				FFF802271B1654F40070D501 /* FactorsGenerator.swift in Sources */,
 				FF06EBA61B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +313,7 @@
 				FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
 				FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */,
 				FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */,
+				FFF802281B1654F40070D501 /* FactorsGenerator.swift in Sources */,
 				FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
