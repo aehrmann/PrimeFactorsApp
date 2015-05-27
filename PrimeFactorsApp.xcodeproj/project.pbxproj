@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4A2D9939C9031F22B43AD6 /* Pods_PrimeFactorsAppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
 		FF858E741B161328001EDB59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E731B161328001EDB59 /* ViewController.swift */; };
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
@@ -25,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AE318D6666694D9CBFACB39 /* Pods-PrimeFactorsAppSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.release.xcconfig"; sourceTree = "<group>"; };
+		5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactorsAppSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E701B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF858E711B161328001EDB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +36,7 @@
 		FF858E761B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF858E781B161328001EDB59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF858E7B1B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactorsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF858E811B161328001EDB59 /* PrimeFactorsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PrimeFactorsAppTests.xctest; path = PrimeFactorsAppSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E861B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,18 +52,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4A2D9939C9031F22B43AD6 /* Pods_PrimeFactorsAppSpecs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D250190211C941CCDB740AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */,
+				1AE318D6666694D9CBFACB39 /* Pods-PrimeFactorsAppSpecs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5C65BED5CB0976A8C4622C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF858E631B161328001EDB59 = {
 			isa = PBXGroup;
 			children = (
 				FF858E6E1B161328001EDB59 /* PrimeFactorsApp */,
 				FF858E841B161328001EDB59 /* PrimeFactorsAppSpecs */,
 				FF858E6D1B161328001EDB59 /* Products */,
+				1D250190211C941CCDB740AA /* Pods */,
+				F5C65BED5CB0976A8C4622C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF858E8E1B161328001EDB59 /* Build configuration list for PBXNativeTarget "PrimeFactorsAppSpecs" */;
 			buildPhases = (
+				3A6553522D5EB327624E409F /* Check Pods Manifest.lock */,
 				FF858E7D1B161328001EDB59 /* Sources */,
 				FF858E7E1B161328001EDB59 /* Frameworks */,
 				FF858E7F1B161328001EDB59 /* Resources */,
+				4952654DCA71CE2341ACCB4E /* Embed Pods Frameworks */,
+				B5CFDF0C1A0D1EF464D45DCF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +231,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A6553522D5EB327624E409F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4952654DCA71CE2341ACCB4E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CFDF0C1A0D1EF464D45DCF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF858E681B161328001EDB59 /* Sources */ = {
@@ -357,6 +432,7 @@
 		};
 		FF858E8F1B161328001EDB59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -376,6 +452,7 @@
 		};
 		FF858E901B161328001EDB59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE318D6666694D9CBFACB39 /* Pods-PrimeFactorsAppSpecs.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -408,6 +485,7 @@
 				FF858E8D1B161328001EDB59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF858E8E1B161328001EDB59 /* Build configuration list for PBXNativeTarget "PrimeFactorsAppSpecs" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +494,7 @@
 				FF858E901B161328001EDB59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_PrimeFactorsAppSpecs {
+  umbrella header "Pods-PrimeFactorsAppSpecs-umbrella.h"
+
+  export *
+  module * { export * }
+}
