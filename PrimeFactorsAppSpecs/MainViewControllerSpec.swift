@@ -26,15 +26,11 @@ class MockPrimeFactorsGenerator: FactorsGenerator {
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("home view controller") {
+
             describe("submits input from the text field") {
                 it("delegates to the generator") {
                     let controller = MainViewController()
-                    let button = UIButton()
-                    var textField = UITextField()
                     let generator = MockPrimeFactorsGenerator()
-
-                    controller.generateButton = button
-                    controller.numberTextField = textField
                     controller.generator = generator
 
                     controller.submitNumberInput()

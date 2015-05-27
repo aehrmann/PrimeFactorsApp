@@ -16,9 +16,10 @@ public class MainViewController: UIViewController {
 
     public var generator: FactorsGenerator?
 
-    func submitNumberInput() {
+    @IBAction func submitNumberInput() {
         generator!.generate(1)
     }
+
 
 
 }
