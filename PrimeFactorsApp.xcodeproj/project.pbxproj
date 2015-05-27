@@ -11,6 +11,9 @@
 		FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */; };
 		FF06EBA61B161CAD007EEDB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */; };
 		FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */; };
+		FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */; };
+		FF06EBAC1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */; };
+		FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */; };
 		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
 		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
@@ -33,6 +36,8 @@
 		F53FD569DBCA6835AD18776D /* Pods-PrimeFactorsAppSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsAppSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsAppSpecs/Pods-PrimeFactorsAppSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
 		FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactorsGeneratorSpec.swift; sourceTree = "<group>"; };
+		FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactorsGenerator.swift; sourceTree = "<group>"; };
 		FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E701B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF858E711B161328001EDB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 				FF858E7A1B161328001EDB59 /* LaunchScreen.xib */,
 				FF858E6F1B161328001EDB59 /* Supporting Files */,
 				FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */,
+				FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */,
 			);
 			path = PrimeFactorsApp;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			children = (
 				FF858E851B161328001EDB59 /* Supporting Files */,
 				FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */,
+				FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */,
 			);
 			path = PrimeFactorsAppSpecs;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */,
+				FF06EBAC1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
 				FF06EBA61B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +305,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
+				FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */,
 				FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */,
 				FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 			);
