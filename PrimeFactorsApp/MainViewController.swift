@@ -9,9 +9,16 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+public class MainViewController: UIViewController {
 
     @IBOutlet weak var numberTextField: UITextField!
-
     @IBOutlet weak var generateButton: UIButton!
+
+    public var generator: FactorsGenerator?
+
+    func submitNumberInput() {
+        generator!.generate(1)
+    }
+
+
 }

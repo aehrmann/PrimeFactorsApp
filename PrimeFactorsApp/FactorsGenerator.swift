@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol FactorsGenerator {
+public protocol FactorsGenerator {
     func generate(number: Int) -> [Int]
 }

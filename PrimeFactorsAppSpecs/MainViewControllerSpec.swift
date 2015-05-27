@@ -11,17 +11,22 @@ import Quick
 import Nimble
 
 class MockPrimeFactorsGenerator: FactorsGenerator {
-    var generateWasCalled = false
+    var generateWasCalled: Bool
+
+    init() {
+        self.generateWasCalled = false
+    }
 
     func generate(number: Int) -> [Int] {
-        generateWasCalled = true
+        self.generateWasCalled = true
+        return [Int]()
     }
 }
 
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("home view controller") {
-            describe("clicking the generate button") {
+            describe("submits input from the text field") {
                 it("delegates to the generator") {
                     let controller = MainViewController()
                     let button = UIButton()
@@ -34,7 +39,7 @@ class MainViewControllerSpec: QuickSpec {
 
                     controller.submitNumberInput()
 
-                    expect(controller.generator.generateWasCalled).to(beTrue())
+                    expect(generator.generateWasCalled).to(beTrue())
                 }
             }
         }
