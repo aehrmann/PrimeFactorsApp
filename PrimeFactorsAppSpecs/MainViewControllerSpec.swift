@@ -80,6 +80,32 @@ class MainViewControllerSpec: QuickSpec {
                     expect(controller.factorsTableView.numberOfRowsInSection(0)).to(equal(3))
                 }
 
+                it("has the correct number of rows in the table") {
+                    let numberToFactor = 2 * 3 * 5
+                    let inputText = String(numberToFactor)
+                    controller.numberTextField.text = inputText
+                    controller.generator = PrimeFactorsGenerator()
+
+                    tableView.dataSource = controller
+
+                    controller.submitNumberInput()
+
+                    expect(controller.factorsTableView.numberOfRowsInSection(0)).to(equal(3))
+                }
+
+                xit("has the correct values in each row of the table") {
+                    controller.numberTextField.text = "2"
+                    generator.results = [2, 3, 5]
+                    tableView.dataSource = controller
+
+                    controller.submitNumberInput()
+
+                    var indexPath = NSIndexPath(forRow: 0, inSection: 0)
+                    var cell = controller.factorsTableView.cellForRowAtIndexPath(indexPath)
+                    var textLabel = cell!.textLabel
+                    expect(textLabel!.text).to(equal("2"))
+                }
+
             }
         }
     }
