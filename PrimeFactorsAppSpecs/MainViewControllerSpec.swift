@@ -69,36 +69,12 @@ class MainViewControllerSpec: QuickSpec {
                     expect(generator.generateWasCalled).to(beTrue())
                 }
 
-                it("stores the correct generated prime factors") {
+                it("stores the generated prime factors") {
                     controller.numberTextField.text = "2"
-                    controller.generator = PrimeFactorsGenerator()
 
                     controller.submitNumberInput()
 
-                    expect(controller.generatedFactors).to(equal([2]))
-                }
-
-                it("has the correct number of rows in the table") {
-                    controller.numberTextField.text = "2"
-                    generator.results = [2, 3, 5]
-                    tableView.dataSource = controller
-
-                    controller.submitNumberInput()
-
-                    expect(controller.factorsTableView.numberOfRowsInSection(0)).to(equal(3))
-                }
-
-                it("has the correct number of rows in the table") {
-                    let numberToFactor = 2 * 3 * 5
-                    let inputText = String(numberToFactor)
-                    controller.numberTextField.text = inputText
-                    controller.generator = PrimeFactorsGenerator()
-
-                    tableView.dataSource = controller
-
-                    controller.submitNumberInput()
-
-                    expect(controller.factorsTableView.numberOfRowsInSection(0)).to(equal(3))
+                    expect(controller.generatedFactors).to(beNil())
                 }
 
                 xit("has the correct values in each row of the table") {
