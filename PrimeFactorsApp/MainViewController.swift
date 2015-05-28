@@ -17,6 +17,8 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     public var generator: FactorsGenerator?
     public var generatedFactors: [Int]?
+    public var inputAsInteger: Int?
+
     let textCellIdentifier = "TextCell"
 
     override public func viewDidLoad() {
@@ -25,8 +27,8 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     }
 
     @IBAction func submitNumberInput() {
-        var inputString = numberTextField.text
-        var inputAsInteger = inputString.toInt()
+        let inputString = numberTextField.text
+        inputAsInteger = inputString.toInt()
         generatedFactors = generator!.generate(inputAsInteger!)
     }
 

@@ -53,6 +53,14 @@ class MainViewControllerSpec: QuickSpec {
                     controller.factorsTableView = tableView
                 }
 
+                it("converts the text field's content to a numeric value") {
+                    controller.numberTextField.text = "38"
+
+                    controller.submitNumberInput()
+
+                    expect(controller.inputAsInteger).to(equal(38))
+                }
+
                 it("delegates to the generator") {
                     controller.numberTextField.text = "2"
 
