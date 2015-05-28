@@ -41,13 +41,16 @@ class MainViewControllerSpec: QuickSpec {
                 var controller = MainViewController()
                 var generator = MockPrimeFactorsGenerator()
                 var textField = UITextField()
+                var tableView = UITableView()
 
                 beforeEach {
                     controller = MainViewController()
                     generator = MockPrimeFactorsGenerator()
                     textField = UITextField()
+                    tableView = UITableView()
                     controller.generator = generator
                     controller.numberTextField = textField
+                    controller.factorsTableView = tableView
                 }
 
                 it("delegates to the generator") {
@@ -66,6 +69,17 @@ class MainViewControllerSpec: QuickSpec {
 
                     expect(controller.generatedFactors).to(equal([2]))
                 }
+
+                it("has the correct number of rows in the table") {
+                    controller.numberTextField.text = "2"
+                    generator.results = [2, 3, 5]
+                    tableView.dataSource = controller
+
+                    controller.submitNumberInput()
+
+                    expect(controller.factorsTableView.numberOfRowsInSection(0)).to(equal(3))
+                }
+
             }
         }
     }
