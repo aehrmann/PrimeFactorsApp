@@ -51,6 +51,7 @@ class MainViewControllerSpec: QuickSpec {
                     controller.generator = generator
                     controller.numberTextField = textField
                     controller.factorsTableView = tableView
+                    controller.numberTextField.text = "2"
                 }
 
                 it("converts the text field's content to a numeric value") {
@@ -62,23 +63,18 @@ class MainViewControllerSpec: QuickSpec {
                 }
 
                 it("delegates to the generator") {
-                    controller.numberTextField.text = "2"
-
                     controller.submitNumberInput()
 
                     expect(generator.generateWasCalled).to(beTrue())
                 }
 
                 it("stores the generated prime factors") {
-                    controller.numberTextField.text = "2"
-
                     controller.submitNumberInput()
 
-                    expect(controller.generatedFactors).to(beNil())
+                    expect(controller.generatedFactors).toNot(beNil())
                 }
 
                 xit("has the correct values in each row of the table") {
-                    controller.numberTextField.text = "2"
                     generator.results = [2, 3, 5]
                     tableView.dataSource = controller
 
