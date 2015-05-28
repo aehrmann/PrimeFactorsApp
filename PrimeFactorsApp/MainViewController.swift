@@ -1,11 +1,3 @@
-//
-//  HomeViewController.swift
-//  PrimeFactorsApp
-//
-//  Created by Ariel Ehrmann on 5/27/15.
-//  Copyright (c) 2015 AriAndLisa. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -19,18 +11,16 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     public var generatedFactors: [Int]?
     public var inputAsInteger: Int?
 
-    let textCellIdentifier = "TextCell"
-
     override public func viewDidLoad() {
         super.viewDidLoad()
         generator = PrimeFactorsGenerator()
     }
 
     @IBAction func submitNumberInput() {
-        let inputString = numberTextField.text
-        inputAsInteger = inputString.toInt()
+        inputAsInteger = numberTextField.text.toInt()
         generatedFactors = generator!.generate(inputAsInteger!)
         factorsTableView.dataSource = self
+        factorsTableView.reloadData()
     }
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -42,12 +32,10 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     }
 
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
-
+        let cell = UITableViewCell()
         let row = indexPath.row
-        var cellValue = String(generatedFactors![row])
-        
+        var cellLabelValue = String(generatedFactors![row])
+        cell.textLabel?.text = cellLabelValue
         return cell
     }
-
 }

@@ -14,6 +14,8 @@
 		FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */; };
 		FF06EBAC1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */; };
 		FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */; };
+		FF50CFC81B17C97A002FA38B /* MockPrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50CFC71B17C97A002FA38B /* MockPrimeFactorsGenerator.swift */; };
+		FF50CFCA1B17C99A002FA38B /* MockUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50CFC91B17C99A002FA38B /* MockUITableView.swift */; };
 		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
 		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
@@ -40,6 +42,8 @@
 		FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactorsGeneratorSpec.swift; sourceTree = "<group>"; };
 		FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactorsGenerator.swift; sourceTree = "<group>"; };
+		FF50CFC71B17C97A002FA38B /* MockPrimeFactorsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPrimeFactorsGenerator.swift; sourceTree = "<group>"; };
+		FF50CFC91B17C99A002FA38B /* MockUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUITableView.swift; sourceTree = "<group>"; };
 		FF858E6C1B161328001EDB59 /* PrimeFactorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E701B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF858E711B161328001EDB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 				5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF50CFC61B17C92B002FA38B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FF50CFC71B17C97A002FA38B /* MockPrimeFactorsGenerator.swift */,
+				FF50CFC91B17C99A002FA38B /* MockUITableView.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		FF858E631B161328001EDB59 = {
@@ -133,6 +146,7 @@
 		FF858E841B161328001EDB59 /* PrimeFactorsAppSpecs */ = {
 			isa = PBXGroup;
 			children = (
+				FF50CFC61B17C92B002FA38B /* Mocks */,
 				FF858E851B161328001EDB59 /* Supporting Files */,
 				FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */,
 				FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */,
@@ -310,7 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF50CFC81B17C97A002FA38B /* MockPrimeFactorsGenerator.swift in Sources */,
 				FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
+				FF50CFCA1B17C99A002FA38B /* MockUITableView.swift in Sources */,
 				FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */,
 				FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */,
 				FFF802281B1654F40070D501 /* FactorsGenerator.swift in Sources */,
