@@ -32,8 +32,20 @@ class MainViewControllerSpec: QuickSpec {
             describe("Loading the view") {
                 it("builds a generator") {
                     let controller = MainViewController()
+
                     controller.viewDidLoad()
+
                     expect(controller.generator).notTo(beNil())
+                }
+
+                it("has no data source for its table view") {
+                    let controller = MainViewController()
+                    let tableView = UITableView()
+                    controller.factorsTableView = tableView
+
+                    controller.viewDidLoad()
+
+                    expect(controller.factorsTableView.dataSource).to(beNil())
                 }
             }
 
@@ -72,6 +84,12 @@ class MainViewControllerSpec: QuickSpec {
                     controller.submitNumberInput()
 
                     expect(controller.generatedFactors).toNot(beNil())
+                }
+
+                it("sets the table view's data source") {
+                    controller.submitNumberInput()
+
+                    expect(controller.factorsTableView.dataSource).notTo(beNil())
                 }
 
                 xit("has the correct values in each row of the table") {

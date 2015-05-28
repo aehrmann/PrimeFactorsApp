@@ -30,6 +30,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         let inputString = numberTextField.text
         inputAsInteger = inputString.toInt()
         generatedFactors = generator!.generate(inputAsInteger!)
+        factorsTableView.dataSource = self
     }
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -45,7 +46,6 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
         let row = indexPath.row
         var cellValue = String(generatedFactors![row])
-        cell.textLabel?.text = cellValue
         
         return cell
     }
