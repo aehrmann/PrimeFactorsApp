@@ -33,7 +33,7 @@ class MainViewControllerSpec: QuickSpec {
                     controller.numberTextField.text = placeholderInput
                 }
 
-                it("converts the text field's content to a numeric value") {
+                it("converts the text field's content to an integer value") {
                     controller.numberTextField.text = "38"
 
                     controller.submitNumberInput()
@@ -41,10 +41,17 @@ class MainViewControllerSpec: QuickSpec {
                     expect(controller.inputAsInteger).to(equal(38))
                 }
 
-                it("delegates to the generator") {
+                it("delegates to the generator when the input is an integer") {
                     controller.submitNumberInput()
 
                     expect(generator.generateWasCalled).to(beTrue())
+                }
+
+                it("does not delegate to the generator when the input is not an integer") {
+                    controller.numberTextField.text = "not an integer"
+                    controller.submitNumberInput()
+
+                    expect(generator.generateWasCalled).to(beFalse())
                 }
 
                 it("stores the generated prime factors") {

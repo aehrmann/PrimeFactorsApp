@@ -17,8 +17,12 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     }
 
     @IBAction func submitNumberInput() {
-        inputAsInteger = numberTextField.text.toInt()
-        generatedFactors = generator!.generate(inputAsInteger!)
+        if let integerValue = numberTextField.text.toInt() {
+            inputAsInteger = integerValue
+            generatedFactors = generator!.generate(inputAsInteger!)
+        } else {
+            generatedFactors = []
+        }
         factorsTableView.dataSource = self
         factorsTableView.reloadData()
     }
