@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7E-L1-ctG">
-                                <rect key="frame" x="234" y="124" width="132" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7E-L1-ctG">
+                                <rect key="frame" x="261" y="140" width="78" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Generate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,28 +28,30 @@
                                     <action selector="submitNumberInput" destination="BYZ-38-t0r" eventType="touchUpInside" id="408-SF-7Mq"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YkA-WX-kWt">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkA-WX-kWt">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Prime Factors" id="Y5j-EW-XpC"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-KZ-hiM">
-                                <rect key="frame" x="150" y="86" width="300" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-KZ-hiM">
+                                <rect key="frame" x="98" y="90" width="404" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-Fh-hEZ">
-                                <rect key="frame" x="66" y="195" width="469" height="300"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-Fh-hEZ">
+                                <rect key="frame" x="66" y="183" width="468" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YkA-WX-kWt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2gm-jK-fBc"/>
+                            <constraint firstAttribute="centerX" secondItem="YkA-WX-kWt" secondAttribute="centerX" id="7RI-jE-UAV"/>
                             <constraint firstItem="dOn-Fh-hEZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="9Gk-vt-dLT"/>
                             <constraint firstItem="D7E-L1-ctG" firstAttribute="top" secondItem="Y7H-KZ-hiM" secondAttribute="bottom" constant="20" id="DRp-Zs-1GR"/>
                             <constraint firstItem="Y7H-KZ-hiM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" multiplier="3" constant="50" id="SiV-er-uhv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dOn-Fh-hEZ" secondAttribute="bottom" constant="50" id="Tow-lT-tMx"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Y7H-KZ-hiM" secondAttribute="trailing" multiplier="3" constant="50" id="UPh-cn-oay"/>
                             <constraint firstItem="dOn-Fh-hEZ" firstAttribute="top" secondItem="D7E-L1-ctG" secondAttribute="bottom" constant="8" id="We1-ZE-Ysg"/>
                             <constraint firstItem="Y7H-KZ-hiM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="dhO-Sn-YA3"/>
