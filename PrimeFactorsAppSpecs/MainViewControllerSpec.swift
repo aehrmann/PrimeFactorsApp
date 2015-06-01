@@ -5,6 +5,22 @@ import Nimble
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("MainViewController") {
+            var controller = MainViewController()
+            var generator = MockPrimeFactorsGenerator()
+            var textField = UITextField()
+            var tableView = UITableView()
+            let placeholderInput = "2"
+
+            beforeEach {
+                controller = MainViewController()
+                generator = MockPrimeFactorsGenerator()
+                textField = UITextField()
+                tableView = UITableView()
+                controller.generator = generator
+                controller.numberTextField = textField
+                controller.factorsTableView = tableView
+                controller.numberTextField.text = placeholderInput
+            }
 
             describe("Loading the view") {
                 it("builds a generator") {
@@ -16,24 +32,7 @@ class MainViewControllerSpec: QuickSpec {
                 }
             }
 
-            describe("processing input from the text field") {
-                var controller = MainViewController()
-                var generator = MockPrimeFactorsGenerator()
-                var textField = UITextField()
-                var tableView = UITableView()
-                let placeholderInput = "2"
-
-                beforeEach {
-                    controller = MainViewController()
-                    generator = MockPrimeFactorsGenerator()
-                    textField = UITextField()
-                    tableView = UITableView()
-                    controller.generator = generator
-                    controller.numberTextField = textField
-                    controller.factorsTableView = tableView
-                    controller.numberTextField.text = placeholderInput
-                }
-
+            describe("Processing input from the text field") {
                 it("converts the text field's content to an integer value") {
                     controller.numberTextField.text = "38"
 
@@ -43,6 +42,10 @@ class MainViewControllerSpec: QuickSpec {
                 }
 
                 context("when the input is an integer") {
+                    beforeEach {
+                        controller.numberTextField.text = "5"
+                    }
+
                     it("delegates to the generator") {
                         controller.updateFactorsTable()
 
@@ -57,8 +60,11 @@ class MainViewControllerSpec: QuickSpec {
                 }
 
                 context("when the input is not an integer") {
-                    it("does not delegate to the generator") {
+                    beforeEach {
                         controller.numberTextField.text = "not an integer"
+                    }
+
+                    it("does not delegate to the generator") {
                         controller.updateFactorsTable()
 
                         expect(generator.generateWasCalled).to(beFalse())
@@ -72,23 +78,7 @@ class MainViewControllerSpec: QuickSpec {
                 }
             }
 
-            describe("populating the table with generated factors") {
-                var controller = MainViewController()
-                var generator = MockPrimeFactorsGenerator()
-                var textField = UITextField()
-                var tableView = UITableView()
-                let placeholderInput = "2"
-
-                beforeEach {
-                    controller = MainViewController()
-                    generator = MockPrimeFactorsGenerator()
-                    textField = UITextField()
-                    tableView = UITableView()
-                    controller.generator = generator
-                    controller.numberTextField = textField
-                    controller.factorsTableView = tableView
-                    controller.numberTextField.text = placeholderInput
-                }
+            describe("Populating the table with generated factors") {
 
                 it("sets the table view's data source") {
                     controller.updateFactorsTable()
