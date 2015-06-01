@@ -15,7 +15,7 @@ class MainViewControllerSpec: QuickSpec {
                 }
             }
 
-            describe("Submitting input from the text field") {
+            describe("processing input from the text field") {
                 var controller = MainViewController()
                 var generator = MockPrimeFactorsGenerator()
                 var textField = UITextField()
@@ -102,6 +102,16 @@ class MainViewControllerSpec: QuickSpec {
                     cell = controller.tableView(tableView, cellForRowAtIndexPath: indexPath)
                     textLabel = cell.textLabel
                     expect(textLabel!.text).to(equal("5"))
+                }
+
+            }
+
+            describe("dynamically updating table results") {
+                it("refreshes the table results when input changes") {
+                    controller.numberTextField.text = "4"
+                    expect(controller.countInputSubmits).to(equal(1))
+                    controller.numberTextField.text = "4"
+                    expect(controller.countInputSubmits).to(equal(1))
                 }
             }
         }
