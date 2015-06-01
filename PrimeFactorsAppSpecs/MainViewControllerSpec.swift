@@ -4,7 +4,8 @@ import Nimble
 
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
-        describe("home view controller") {
+        describe("MainViewController") {
+
             describe("Loading the view") {
                 it("builds a generator") {
                     let controller = MainViewController()
@@ -36,32 +37,61 @@ class MainViewControllerSpec: QuickSpec {
                 it("converts the text field's content to an integer value") {
                     controller.numberTextField.text = "38"
 
-                    controller.submitNumberInput()
+                    controller.updateFactorsTable()
 
                     expect(controller.inputAsInteger).to(equal(38))
                 }
 
-                it("delegates to the generator when the input is an integer") {
-                    controller.submitNumberInput()
+                context("when the input is an integer") {
+                    it("delegates to the generator") {
+                        controller.updateFactorsTable()
 
-                    expect(generator.generateWasCalled).to(beTrue())
+                        expect(generator.generateWasCalled).to(beTrue())
+                    }
+
+                    it("stores the generated prime factors") {
+                        controller.updateFactorsTable()
+
+                        expect(controller.generatedFactors).toNot(beNil())
+                    }
                 }
 
-                it("does not delegate to the generator when the input is not an integer") {
-                    controller.numberTextField.text = "not an integer"
-                    controller.submitNumberInput()
+                context("when the input is not an integer") {
+                    it("does not delegate to the generator") {
+                        controller.numberTextField.text = "not an integer"
+                        controller.updateFactorsTable()
 
-                    expect(generator.generateWasCalled).to(beFalse())
+                        expect(generator.generateWasCalled).to(beFalse())
+                    }
+
+                    it("has an empty list of prime factors") {
+                        controller.updateFactorsTable()
+
+                        expect(controller.generatedFactors?.isEmpty).to(beTrue())
+                    }
                 }
+            }
 
-                it("stores the generated prime factors") {
-                    controller.submitNumberInput()
+            describe("populating the table with generated factors") {
+                var controller = MainViewController()
+                var generator = MockPrimeFactorsGenerator()
+                var textField = UITextField()
+                var tableView = UITableView()
+                let placeholderInput = "2"
 
-                    expect(controller.generatedFactors).toNot(beNil())
+                beforeEach {
+                    controller = MainViewController()
+                    generator = MockPrimeFactorsGenerator()
+                    textField = UITextField()
+                    tableView = UITableView()
+                    controller.generator = generator
+                    controller.numberTextField = textField
+                    controller.factorsTableView = tableView
+                    controller.numberTextField.text = placeholderInput
                 }
 
                 it("sets the table view's data source") {
-                    controller.submitNumberInput()
+                    controller.updateFactorsTable()
 
                     expect(controller.factorsTableView.dataSource).notTo(beNil())
                 }
@@ -70,7 +100,7 @@ class MainViewControllerSpec: QuickSpec {
                     let tableView = MockUITableView()
                     controller.factorsTableView = tableView
 
-                    controller.submitNumberInput()
+                    controller.updateFactorsTable()
 
                     expect(tableView.reloadDataWasCalled).to(beTrue())
                 }
@@ -78,7 +108,7 @@ class MainViewControllerSpec: QuickSpec {
                 it("populates the table with the correct number of rows") {
                     generator.results = [2, 3, 5, 7]
 
-                    controller.submitNumberInput()
+                    controller.updateFactorsTable()
 
                     expect(controller.factorsTableView.numberOfRowsInSection(0)).to(equal(4))
                 }
@@ -86,7 +116,7 @@ class MainViewControllerSpec: QuickSpec {
                 it("has the correct values in each row of the table") {
                     generator.results = [2, 3, 5]
 
-                    controller.submitNumberInput()
+                    controller.updateFactorsTable()
 
                     var indexPath = NSIndexPath(forRow: 0, inSection: 0)
                     var cell = controller.tableView(tableView, cellForRowAtIndexPath: indexPath)
@@ -104,15 +134,6 @@ class MainViewControllerSpec: QuickSpec {
                     expect(textLabel!.text).to(equal("5"))
                 }
 
-            }
-
-            describe("dynamically updating table results") {
-                it("refreshes the table results when input changes") {
-                    controller.numberTextField.text = "4"
-                    expect(controller.countInputSubmits).to(equal(1))
-                    controller.numberTextField.text = "4"
-                    expect(controller.countInputSubmits).to(equal(1))
-                }
             }
         }
     }

@@ -16,13 +16,21 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         generator = PrimeFactorsGenerator()
     }
 
-    @IBAction func submitNumberInput() {
+    @IBAction func updateFactorsTable() {
+        processInput()
+        reloadTableData()
+    }
+
+    private func processInput() {
         if let integerValue = numberTextField.text.toInt() {
             inputAsInteger = integerValue
             generatedFactors = generator!.generate(inputAsInteger!)
         } else {
             generatedFactors = []
         }
+    }
+
+    private func reloadTableData() {
         factorsTableView.dataSource = self
         factorsTableView.reloadData()
     }
