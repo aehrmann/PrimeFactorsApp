@@ -47,6 +47,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         let row = indexPath.row
         var cellLabelValue = String(generatedFactors![row])
         cell.textLabel?.text = cellLabelValue
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 17.0)
         return cell
     }
 }
