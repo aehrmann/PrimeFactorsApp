@@ -4,7 +4,6 @@ import UIKit
 public class MainViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var numberTextField: UITextField!
-    @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var factorsTableView: UITableView!
 
     public var generator: FactorsGenerator?
