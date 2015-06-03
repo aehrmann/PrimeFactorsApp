@@ -11,6 +11,8 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     public var generatedFactors: [Int]?
     public var inputAsInteger: Int?
 
+    private let characterLimit = 12
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         generator = PrimeFactorsGenerator()
@@ -25,30 +27,51 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         let currentInput = numberTextField.text
         if let integerValue = currentInput.toInt() {
             inputAsInteger = integerValue
-            generatedFactors = generator!.generate(inputAsInteger!)
         } else {
-            if currentInput.isEmpty {
-                errorLabel.hidden = true
-            } else {
-                let errorMessage: String?
-                if count(currentInput) >= 12 {
-                    let substringRange = Range(start: currentInput.startIndex, end: advance(currentInput.startIndex, 12))
-                    let truncatedInput = currentInput.substringWithRange(substringRange) + "..."
-                    errorMessage = "\"\(truncatedInput)\" is not an integer"
-                } else {
-                    errorMessage = "\"\(currentInput)\" is not an integer"
-                }
-                errorLabel.hidden = false
-                errorLabel.text = errorMessage
-            }
-            generatedFactors = []
+            updateLabel(currentInput)
         }
+        generatedFactors = factorsFor(currentInput)
     }
 
     private func reloadTableData() {
         factorsTableView.dataSource = self
         factorsTableView.reloadData()
     }
+
+    private func factorsFor(inputString: String) -> [Int] {
+        if let integerValue = inputString.toInt() {
+            inputAsInteger = integerValue
+            return generator!.generate(inputAsInteger!)
+        }
+        return []
+    }
+
+    private func updateLabel(inputString: String) {
+        if inputString.isEmpty {
+            errorLabel.hidden = true
+        } else {
+            let errorMessage = createErrorMessage(inputString)
+            errorLabel.hidden = false
+            errorLabel.text = errorMessage
+        }
+    }
+
+    private func createErrorMessage(inputString: String) -> String {
+        let displayString = formatInputStringForDisplay(inputString, characterLimit: characterLimit)
+        return "\"\(displayString)\" is not an integer"
+    }
+
+    private func formatInputStringForDisplay(inputString: String, characterLimit: Int) -> String {
+        var displayString = inputString
+        if count(inputString) >= characterLimit {
+            let substringRange = Range(start: inputString.startIndex, end: advance(inputString.startIndex, characterLimit))
+            displayString = inputString.substringWithRange(substringRange) + "..."
+        }
+        return displayString
+    }
+
+
+
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
