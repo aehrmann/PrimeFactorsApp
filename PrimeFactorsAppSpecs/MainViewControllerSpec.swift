@@ -60,8 +60,51 @@ class MainViewControllerSpec: QuickSpec {
                 }
 
                 context("when the input is not an integer") {
+                    let errorTextLabel = UILabel()
+                    let nonIntegerInput = "not an integer"
+                    let emptyInput = ""
+                    let errorMessage = "\"\(nonIntegerInput)\" is not an integer"
+
                     beforeEach {
-                        controller.numberTextField.text = "not an integer"
+                        controller.numberTextField.text = nonIntegerInput
+                        controller.errorLabel = errorTextLabel
+                    }
+
+                    context("when input length is less than or equal to the allowed number of characters") {
+                        it("displays an error message with the invalid input") {
+                            let input = "input"
+                            controller.numberTextField.text = input
+                            let errorMessage = "\"\(input)\" is not an integer"
+
+                            controller.updateFactorsTable()
+
+                            expect(controller.errorLabel.hidden).to(beFalse())
+                            expect(controller.errorLabel.text).to(equal(errorMessage))
+                        }
+
+                    }
+
+                    context("when input length is greater than the allowed number of characters") {
+                        it("displays an error message with the truncated invalid input") {
+                            let nonIntegerInput = "not an integer"
+                            let truncatedInput = "not an integ..."
+
+                            let errorMessage = "\"\(truncatedInput)\" is not an integer"
+
+                            controller.updateFactorsTable()
+
+                            expect(controller.errorLabel.hidden).to(beFalse())
+                            expect(controller.errorLabel.text).to(equal(errorMessage))
+                        }
+
+                    }
+
+                    it("does not display an error message if the input is an empty string") {
+                        controller.numberTextField.text = emptyInput
+
+                        controller.updateFactorsTable()
+
+                        expect(controller.errorLabel.hidden).to(beTrue())
                     }
 
                     it("does not delegate to the generator") {
@@ -123,7 +166,6 @@ class MainViewControllerSpec: QuickSpec {
                     textLabel = cell.textLabel
                     expect(textLabel!.text).to(equal("5"))
                 }
-
             }
         }
     }

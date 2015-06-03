@@ -5,6 +5,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var factorsTableView: UITableView!
+    @IBOutlet weak var errorLabel: UILabel!
 
     public var generator: FactorsGenerator?
     public var generatedFactors: [Int]?
@@ -21,10 +22,25 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     }
 
     private func processInput() {
-        if let integerValue = numberTextField.text.toInt() {
+        let currentInput = numberTextField.text
+        if let integerValue = currentInput.toInt() {
             inputAsInteger = integerValue
             generatedFactors = generator!.generate(inputAsInteger!)
         } else {
+            if currentInput.isEmpty {
+                errorLabel.hidden = true
+            } else {
+                let errorMessage: String?
+                if count(currentInput) >= 12 {
+                    let substringRange = Range(start: currentInput.startIndex, end: advance(currentInput.startIndex, 12))
+                    let truncatedInput = currentInput.substringWithRange(substringRange) + "..."
+                    errorMessage = "\"\(truncatedInput)\" is not an integer"
+                } else {
+                    errorMessage = "\"\(currentInput)\" is not an integer"
+                }
+                errorLabel.hidden = false
+                errorLabel.text = errorMessage
+            }
             generatedFactors = []
         }
     }

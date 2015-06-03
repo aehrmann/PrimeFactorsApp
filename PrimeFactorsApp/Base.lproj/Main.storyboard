@@ -29,14 +29,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an integer" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-KZ-hiM" userLabel="Integer Input">
                                 <rect key="frame" x="75" y="111" width="450" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <action selector="updateFactorsTable" destination="BYZ-38-t0r" eventType="editingChanged" id="w9c-4h-fQL"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-IH-xL9" userLabel="Error Label">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-IH-xL9" userLabel="Error Label">
                                 <rect key="frame" x="75" y="79" width="450" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -51,7 +51,7 @@
                             <constraint firstItem="dOn-Fh-hEZ" firstAttribute="top" secondItem="Y7H-KZ-hiM" secondAttribute="bottom" id="4e8-Sd-GjN"/>
                             <constraint firstAttribute="centerX" secondItem="YkA-WX-kWt" secondAttribute="centerX" id="7RI-jE-UAV"/>
                             <constraint firstAttribute="centerX" secondItem="dOn-Fh-hEZ" secondAttribute="centerX" id="ER8-Yr-nAM"/>
-                            <constraint firstItem="Y7H-KZ-hiM" firstAttribute="top" secondItem="V1s-IH-xL9" secondAttribute="bottom" constant="15" id="KNE-PU-s8x"/>
+                            <constraint firstItem="Y7H-KZ-hiM" firstAttribute="top" secondItem="V1s-IH-xL9" secondAttribute="bottom" constant="15" id="KNE-PU-s8x" userLabel="Vertical Space - TextField to Error - (15) - Integer Input - Error Label"/>
                             <constraint firstItem="dOn-Fh-hEZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Zn4-p7-pxp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dOn-Fh-hEZ" secondAttribute="bottom" id="aeO-AN-jhS"/>
                             <constraint firstItem="V1s-IH-xL9" firstAttribute="top" secondItem="YkA-WX-kWt" secondAttribute="bottom" constant="15" id="cTk-RH-TH6"/>
@@ -63,6 +63,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="V1s-IH-xL9" id="nzF-ZS-kOg"/>
                         <outlet property="factorsTableView" destination="dOn-Fh-hEZ" id="UNO-oJ-eke"/>
                         <outlet property="numberTextField" destination="Y7H-KZ-hiM" id="w6H-d5-Exg"/>
                     </connections>
