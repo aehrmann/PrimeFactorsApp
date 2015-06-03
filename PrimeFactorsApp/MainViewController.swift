@@ -10,6 +10,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     public var generator: FactorsGenerator?
     public var generatedFactors: [Int]?
     public var inputAsInteger: Int?
+    public var labelManager: ErrorLabelManager?
 
     private let characterLimit = 12
     private let customFont = UIFont(name: "Avenir", size: 17.0)
@@ -17,6 +18,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     override public func viewDidLoad() {
         super.viewDidLoad()
         generator = PrimeFactorsGenerator()
+        labelManager = ErrorLabelManager(label: errorLabel)
     }
 
     @IBAction func updateFactorsTable() {
@@ -31,6 +33,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         } else {
             updateLabel(currentInput)
         }
+
 
         generatedFactors = factorsFor(currentInput)
     }

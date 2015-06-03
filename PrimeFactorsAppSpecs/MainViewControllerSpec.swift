@@ -9,6 +9,7 @@ class MainViewControllerSpec: QuickSpec {
             var generator = MockPrimeFactorsGenerator()
             var textField = UITextField()
             var tableView = UITableView()
+            var errorLabel = UILabel()
             let placeholderInput = "2"
 
             beforeEach {
@@ -16,19 +17,30 @@ class MainViewControllerSpec: QuickSpec {
                 generator = MockPrimeFactorsGenerator()
                 textField = UITextField()
                 tableView = UITableView()
+                errorLabel = UILabel()
                 controller.generator = generator
                 controller.numberTextField = textField
                 controller.factorsTableView = tableView
                 controller.numberTextField.text = placeholderInput
+                controller.errorLabel = errorLabel
             }
 
             describe("Loading the view") {
-                it("builds a generator") {
+                beforeEach {
                     let controller = MainViewController()
-
+                    let errorLabel = UILabel()
+                    controller.errorLabel = errorLabel
+                }
+                it("builds a generator") {
                     controller.viewDidLoad()
 
                     expect(controller.generator).notTo(beNil())
+                }
+
+                it("build a label manager") {
+                    controller.viewDidLoad()
+
+                    expect(controller.labelManager).notTo(beNil())
                 }
             }
 
