@@ -12,6 +12,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     public var inputAsInteger: Int?
 
     private let characterLimit = 12
+    private let customFont = UIFont(name: "Avenir", size: 17.0)
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         } else {
             updateLabel(currentInput)
         }
+
         generatedFactors = factorsFor(currentInput)
     }
 
@@ -47,21 +49,22 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     }
 
     private func updateLabel(inputString: String) {
-        if inputString.isEmpty {
-            errorLabel.hidden = true
-        } else {
-            let errorMessage = createErrorMessage(inputString)
-            errorLabel.hidden = false
-            errorLabel.text = errorMessage
+        errorLabel.hidden = isVisible(forInput: inputString)
+        if !errorLabel.hidden {
+            errorLabel.text = createErrorMessage(inputString)
         }
     }
 
+    private func isVisible(forInput inputString: String) -> Bool {
+        return inputString.isEmpty
+    }
+
     private func createErrorMessage(inputString: String) -> String {
-        let displayString = formatInputStringForDisplay(inputString, characterLimit: characterLimit)
+        let displayString = formatForDisplay(inputString: inputString, characterLimit: characterLimit)
         return "\"\(displayString)\" is not an integer"
     }
 
-    private func formatInputStringForDisplay(inputString: String, characterLimit: Int) -> String {
+    private func formatForDisplay(#inputString: String, characterLimit: Int) -> String {
         var displayString = inputString
         if count(inputString) >= characterLimit {
             let substringRange = Range(start: inputString.startIndex, end: advance(inputString.startIndex, characterLimit))
@@ -69,9 +72,6 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         }
         return displayString
     }
-
-
-
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -83,10 +83,8 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let row = indexPath.row
-        var cellLabelValue = String(generatedFactors![row])
-        cell.textLabel?.text = cellLabelValue
-        cell.textLabel?.font = UIFont(name: "Avenir", size: 17.0)
+        cell.textLabel?.text = String(generatedFactors![indexPath.row])
+        cell.textLabel?.font = customFont
         return cell
     }
 }
