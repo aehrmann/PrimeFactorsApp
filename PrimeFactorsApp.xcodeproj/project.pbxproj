@@ -20,6 +20,9 @@
 		FF858E771B161328001EDB59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF858E751B161328001EDB59 /* Main.storyboard */; };
 		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
 		FF858E7C1B161328001EDB59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF858E7A1B161328001EDB59 /* LaunchScreen.xib */; };
+		FFCE23451B1FB6D4003DECB9 /* LabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE23441B1FB6D4003DECB9 /* LabelManager.swift */; };
+		FFCE23461B1FB6D4003DECB9 /* LabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE23441B1FB6D4003DECB9 /* LabelManager.swift */; };
+		FFCE23481B1FB73D003DECB9 /* MockErrorLabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE23471B1FB73D003DECB9 /* MockErrorLabelManager.swift */; };
 		FFD417871B1FA12000E32E59 /* ErrorLabelManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD417851B1FA12000E32E59 /* ErrorLabelManagerSpec.swift */; };
 		FFD417891B1FA38F00E32E59 /* ErrorLabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD417881B1FA38F00E32E59 /* ErrorLabelManager.swift */; };
 		FFD4178A1B1FA38F00E32E59 /* ErrorLabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD417881B1FA38F00E32E59 /* ErrorLabelManager.swift */; };
@@ -55,6 +58,8 @@
 		FF858E7B1B161328001EDB59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FF858E811B161328001EDB59 /* PrimeFactorsAppSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactorsAppSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF858E861B161328001EDB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCE23441B1FB6D4003DECB9 /* LabelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelManager.swift; sourceTree = "<group>"; };
+		FFCE23471B1FB73D003DECB9 /* MockErrorLabelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockErrorLabelManager.swift; sourceTree = "<group>"; };
 		FFD417851B1FA12000E32E59 /* ErrorLabelManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorLabelManagerSpec.swift; sourceTree = "<group>"; };
 		FFD417881B1FA38F00E32E59 /* ErrorLabelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorLabelManager.swift; sourceTree = "<group>"; };
 		FFF802261B1654F40070D501 /* FactorsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorsGenerator.swift; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 			children = (
 				FF50CFC71B17C97A002FA38B /* MockPrimeFactorsGenerator.swift */,
 				FF50CFC91B17C99A002FA38B /* MockUITableView.swift */,
+				FFCE23471B1FB73D003DECB9 /* MockErrorLabelManager.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */,
 				FFF802261B1654F40070D501 /* FactorsGenerator.swift */,
 				FFD417881B1FA38F00E32E59 /* ErrorLabelManager.swift */,
+				FFCE23441B1FB6D4003DECB9 /* LabelManager.swift */,
 			);
 			path = PrimeFactorsApp;
 			sourceTree = "<group>";
@@ -320,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCE23451B1FB6D4003DECB9 /* LabelManager.swift in Sources */,
 				FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */,
 				FF06EBAC1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
 				FFF802271B1654F40070D501 /* FactorsGenerator.swift in Sources */,
@@ -336,10 +344,12 @@
 				FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
 				FF50CFCA1B17C99A002FA38B /* MockUITableView.swift in Sources */,
 				FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */,
+				FFCE23461B1FB6D4003DECB9 /* LabelManager.swift in Sources */,
 				FFD4178A1B1FA38F00E32E59 /* ErrorLabelManager.swift in Sources */,
 				FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */,
 				FFF802281B1654F40070D501 /* FactorsGenerator.swift in Sources */,
 				FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */,
+				FFCE23481B1FB73D003DECB9 /* MockErrorLabelManager.swift in Sources */,
 				FFD417871B1FA12000E32E59 /* ErrorLabelManagerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

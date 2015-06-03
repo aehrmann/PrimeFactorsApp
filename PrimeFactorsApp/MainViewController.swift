@@ -10,7 +10,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     public var generator: FactorsGenerator?
     public var generatedFactors: [Int]?
     public var inputAsInteger: Int?
-    public var labelManager: ErrorLabelManager?
+    public var labelManager: LabelManager?
 
     private let characterLimit = 12
     private let customFont = UIFont(name: "Avenir", size: 17.0)
@@ -28,13 +28,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     private func processInput() {
         let currentInput = numberTextField.text
-        if let integerValue = currentInput.toInt() {
-            inputAsInteger = integerValue
-        } else {
-            updateLabel(currentInput)
-        }
-
-
+        labelManager?.update(currentInput)
         generatedFactors = factorsFor(currentInput)
     }
 
@@ -49,31 +43,6 @@ public class MainViewController: UIViewController, UITableViewDataSource {
             return generator!.generate(inputAsInteger!)
         }
         return []
-    }
-
-    private func updateLabel(inputString: String) {
-        errorLabel.hidden = isVisible(forInput: inputString)
-        if !errorLabel.hidden {
-            errorLabel.text = createErrorMessage(inputString)
-        }
-    }
-
-    private func isVisible(forInput inputString: String) -> Bool {
-        return inputString.isEmpty
-    }
-
-    private func createErrorMessage(inputString: String) -> String {
-        let displayString = formatForDisplay(inputString: inputString, characterLimit: characterLimit)
-        return "\"\(displayString)\" is not an integer"
-    }
-
-    private func formatForDisplay(#inputString: String, characterLimit: Int) -> String {
-        var displayString = inputString
-        if count(inputString) >= characterLimit {
-            let substringRange = Range(start: inputString.startIndex, end: advance(inputString.startIndex, characterLimit))
-            displayString = inputString.substringWithRange(substringRange) + "..."
-        }
-        return displayString
     }
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
