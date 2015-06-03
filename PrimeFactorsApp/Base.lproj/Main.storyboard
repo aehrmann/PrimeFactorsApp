@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -27,31 +26,39 @@
                                     <navigationItem title="Prime Factors" id="Y5j-EW-XpC"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-KZ-hiM">
-                                <rect key="frame" x="98" y="90" width="404" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an integer" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-KZ-hiM" userLabel="Integer Input">
+                                <rect key="frame" x="75" y="111" width="450" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="updateFactorsTable" destination="BYZ-38-t0r" eventType="editingChanged" id="w9c-4h-fQL"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-Fh-hEZ">
-                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-IH-xL9" userLabel="Error Label">
+                                <rect key="frame" x="75" y="79" width="450" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dOn-Fh-hEZ">
+                                <rect key="frame" x="0.0" y="141" width="600" height="459"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YkA-WX-kWt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2gm-jK-fBc"/>
+                            <constraint firstItem="dOn-Fh-hEZ" firstAttribute="top" secondItem="Y7H-KZ-hiM" secondAttribute="bottom" id="4e8-Sd-GjN"/>
                             <constraint firstAttribute="centerX" secondItem="YkA-WX-kWt" secondAttribute="centerX" id="7RI-jE-UAV"/>
                             <constraint firstAttribute="centerX" secondItem="dOn-Fh-hEZ" secondAttribute="centerX" id="ER8-Yr-nAM"/>
-                            <constraint firstItem="Y7H-KZ-hiM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" multiplier="3" constant="50" id="SiV-er-uhv"/>
-                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Y7H-KZ-hiM" secondAttribute="trailing" multiplier="3" constant="50" id="UPh-cn-oay"/>
+                            <constraint firstItem="Y7H-KZ-hiM" firstAttribute="top" secondItem="V1s-IH-xL9" secondAttribute="bottom" constant="15" id="KNE-PU-s8x"/>
                             <constraint firstItem="dOn-Fh-hEZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Zn4-p7-pxp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dOn-Fh-hEZ" secondAttribute="bottom" id="aeO-AN-jhS"/>
-                            <constraint firstItem="Y7H-KZ-hiM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="dhO-Sn-YA3"/>
+                            <constraint firstItem="V1s-IH-xL9" firstAttribute="top" secondItem="YkA-WX-kWt" secondAttribute="bottom" constant="15" id="cTk-RH-TH6"/>
+                            <constraint firstItem="V1s-IH-xL9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="fHL-EP-bgC"/>
                             <constraint firstItem="Y7H-KZ-hiM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fdh-oR-5ha"/>
-                            <constraint firstItem="dOn-Fh-hEZ" firstAttribute="top" secondItem="Y7H-KZ-hiM" secondAttribute="bottom" id="qPV-Au-dNU"/>
+                            <constraint firstItem="Y7H-KZ-hiM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="khq-wv-yqr"/>
+                            <constraint firstAttribute="centerX" secondItem="V1s-IH-xL9" secondAttribute="centerX" id="olG-TV-4Qr"/>
                             <constraint firstItem="YkA-WX-kWt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xnM-dY-UOW"/>
                         </constraints>
                     </view>
