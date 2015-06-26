@@ -1,6 +1,6 @@
 import PrimeFactorsApp
 
-class MockErrorLabelManager: LabelManager {
+class MockInputValidator: InputValidator {
     var updateWasCalled = false
 
     func update(input: String) {

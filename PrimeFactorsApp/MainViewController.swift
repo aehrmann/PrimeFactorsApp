@@ -4,12 +4,12 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet public weak var numberTextField: UITextField!
     @IBOutlet public weak var factorsTableView: UITableView!
-    @IBOutlet public weak var errorLabel: UILabel!
+    @IBOutlet public weak var errorLabel: ErrorLabel!
 
     public var generator: FactorsGenerator?
     public var generatedFactors: [Int]?
     public var inputAsInteger: Int?
-    public var labelManager: LabelManager?
+    public var inputValidator: InputValidator?
 
     private let characterLimit = 12
     private let customFont = UIFont(name: "Avenir", size: 17.0)
@@ -17,7 +17,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     override public func viewDidLoad() {
         super.viewDidLoad()
         generator = PrimeFactorsGenerator()
-        labelManager = ErrorLabelManager(label: errorLabel)
+        inputValidator = DefaultInputValidator(view: errorLabel)
     }
 
     @IBAction public func updateFactorsTable() {
@@ -27,7 +27,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     private func processInput() {
         let currentInput = numberTextField.text
-        labelManager?.update(currentInput)
+        inputValidator?.update(currentInput)
         generatedFactors = factorsFor(currentInput)
     }
 
@@ -40,8 +40,9 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         if let integerValue = inputString.toInt() {
             inputAsInteger = integerValue
             return generator!.generate(inputAsInteger!)
+        } else {
+            return []
         }
-        return []
     }
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {

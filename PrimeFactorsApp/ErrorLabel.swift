@@ -1,20 +1,31 @@
 import UIKit
 
-public class ErrorLabelManager: LabelManager {
-    public let label: UILabel
+public protocol ErrorMessageView {
+
+    func inputWasValid()
+    func inputWasInvalid(userInput: String)
+
+}
+
+public class ErrorLabel: UILabel, ErrorMessageView {
+
     private let characterLimit = 12
 
-    public init(label: UILabel) {
-        self.label = label
+    required public init(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder)
     }
 
-    public func update(userInput: String) {
-        if userInput.toInt() != nil || userInput.isEmpty {
-            label.hidden = true
-        } else {
-            label.hidden = false
-            label.text = createErrorMessage(userInput)
-        }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    public func inputWasValid() {
+        hidden = true
+    }
+
+    public func inputWasInvalid(userInput: String) {
+        hidden = false
+        text = createErrorMessage(userInput)
     }
 
     private func createErrorMessage(inputString: String) -> String {

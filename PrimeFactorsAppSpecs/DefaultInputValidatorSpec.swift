@@ -2,32 +2,23 @@ import Quick
 import Nimble
 import PrimeFactorsApp
 
-class ErrorLabelManagerSpec: QuickSpec {
+class DefaultInputValidatorSpec: QuickSpec {
     override func spec() {
-        describe("ErrorLabelManager") {
-            describe("creating a manager") {
-                it("stores a text label") {
-                    let label = UILabel()
-                    let manager = ErrorLabelManager(label: label)
-
-                    expect(manager.label).notTo(beNil())
-                }
-            }
-
+        describe("DefaultInputValidator") {
             describe("updating the label") {
-                var label: UILabel!
-                var manager: ErrorLabelManager!
+                var label: ErrorLabel!
+                var inputValidator: DefaultInputValidator!
 
                 beforeEach {
-                    label = UILabel()
-                    manager = ErrorLabelManager(label: label)
+                    label = ErrorLabel()
+                    inputValidator = DefaultInputValidator(view: label)
                 }
 
                 describe("displaying the label") {
                     context("when input is valid") {
                         it("hides the label") {
                             let userInput = "2"
-                            manager.update(userInput)
+                            inputValidator.update(userInput)
                             expect(label.hidden).to(beTrue())
                         }
                     }
@@ -35,7 +26,8 @@ class ErrorLabelManagerSpec: QuickSpec {
                     context("when input is invalid") {
                         it("shows the label") {
                             let userInput = "not valid"
-                            manager.update(userInput)
+                            label.hidden = true
+                            inputValidator.update(userInput)
                             expect(label.hidden).to(beFalse())
                         }
                     }
@@ -43,7 +35,7 @@ class ErrorLabelManagerSpec: QuickSpec {
                     context("when input is empty") {
                         it("hides the label") {
                             let userInput = ""
-                            manager.update(userInput)
+                            inputValidator.update(userInput)
                             expect(label.hidden).to(beTrue())
                         }
                     }
@@ -57,7 +49,7 @@ class ErrorLabelManagerSpec: QuickSpec {
                             let userInput = "not valid"
                             let errorMessage = "\"\(userInput)\" is not an integer"
 
-                            manager.update(userInput)
+                            inputValidator.update(userInput)
 
                             expect(label.text).to(equal(errorMessage))
                         }
@@ -70,7 +62,7 @@ class ErrorLabelManagerSpec: QuickSpec {
                             let truncatedInput = "not an integ..."
                             let errorMessage = "\"\(truncatedInput)\" is not an integer"
 
-                            manager.update(userInput)
+                            inputValidator.update(userInput)
 
                             expect(label.text).to(equal(errorMessage))
                         }

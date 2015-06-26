@@ -23,13 +23,12 @@ class MainViewControllerSpec: QuickSpec {
             }
 
             describe("Loading the view") {
-                var controller = MainViewController()
-                var errorLabel = UILabel()
-                controller.errorLabel = errorLabel
+                var controller: MainViewController!
+                var errorLabel: ErrorLabel!
 
                 beforeEach {
                     controller = MainViewController()
-                    errorLabel = UILabel()
+                    errorLabel = ErrorLabel()
                     controller.errorLabel = errorLabel
                 }
 
@@ -39,22 +38,22 @@ class MainViewControllerSpec: QuickSpec {
                     expect(controller.generator).notTo(beNil())
                 }
 
-                it("build a label manager") {
+                it("build an input validator") {
                     controller.viewDidLoad()
 
-                    expect(controller.labelManager).notTo(beNil())
+                    expect(controller.inputValidator).notTo(beNil())
                 }
             }
 
             describe("Processing input from the text field") {
-                it("delegates to the label manager") {
+                it("validates the input") {
                     let label = UILabel()
-                    let labelManager = MockErrorLabelManager()
-                    controller.labelManager = labelManager
+                    let inputValidator = MockInputValidator()
+                    controller.inputValidator = inputValidator
 
                     controller.updateFactorsTable()
 
-                    expect(labelManager.updateWasCalled).to(beTrue())
+                    expect(inputValidator.updateWasCalled).to(beTrue())
                 }
             }
 
