@@ -5,10 +5,10 @@ import PrimeFactorsApp
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("MainViewController") {
-            var controller = MainViewController()
-            var generator = MockPrimeFactorsGenerator()
-            var textField = UITextField()
-            var tableView = UITableView()
+            var controller: MainViewController!
+            var generator: MockPrimeFactorsGenerator!
+            var textField: UITextField!
+            var tableView: UITableView!
             let placeholderInput = "2"
 
             beforeEach {

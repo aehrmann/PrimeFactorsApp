@@ -15,8 +15,8 @@ class ErrorLabelManagerSpec: QuickSpec {
             }
 
             describe("updating the label") {
-                var label = UILabel()
-                var manager = ErrorLabelManager(label: label)
+                var label: UILabel!
+                var manager: ErrorLabelManager!
 
                 beforeEach {
                     label = UILabel()
