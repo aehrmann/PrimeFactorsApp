@@ -1,7 +1,7 @@
-import Foundation
-
 public class PrimeFactorsGenerator: FactorsGenerator {
-    public init() { }
+
+    public init() {}
+
     public func generate(var number: Int) -> [Int] {
         var factors = [Int]()
         var currentFactor = 2
@@ -14,4 +14,5 @@ public class PrimeFactorsGenerator: FactorsGenerator {
         }
         return factors
     }
+
 }
