@@ -1,7 +1,7 @@
 import UIKit
 
 public class ErrorLabelManager: LabelManager {
-    let label: UILabel
+    public let label: UILabel
     private let characterLimit = 12
 
     public init(label: UILabel) {

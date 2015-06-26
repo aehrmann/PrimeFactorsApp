@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import PrimeFactorsApp
 
 class MockErrorLabelManager: LabelManager {
     var updateWasCalled: Bool

@@ -3,9 +3,9 @@ import UIKit
 
 public class MainViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet weak var numberTextField: UITextField!
-    @IBOutlet weak var factorsTableView: UITableView!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet public weak var numberTextField: UITextField!
+    @IBOutlet public weak var factorsTableView: UITableView!
+    @IBOutlet public weak var errorLabel: UILabel!
 
     public var generator: FactorsGenerator?
     public var generatedFactors: [Int]?
@@ -21,7 +21,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
         labelManager = ErrorLabelManager(label: errorLabel)
     }
 
-    @IBAction func updateFactorsTable() {
+    @IBAction public func updateFactorsTable() {
         processInput()
         reloadTableData()
     }

@@ -1,6 +1,7 @@
 import Foundation
 import Quick
 import Nimble
+import PrimeFactorsApp
 
 class ErrorLabelManagerSpec: QuickSpec {
     override func spec() {

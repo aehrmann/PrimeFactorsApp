@@ -10,10 +10,8 @@
 		3C4A2D9939C9031F22B43AD6 /* Pods_PrimeFactorsAppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5197B32DABAC4D00F9CC8935 /* Pods_PrimeFactorsAppSpecs.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA11B161984007EEDB3 /* MainViewControllerSpec.swift */; };
 		FF06EBA61B161CAD007EEDB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */; };
-		FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA51B161CAD007EEDB3 /* MainViewController.swift */; };
 		FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBA91B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift */; };
 		FF06EBAC1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */; };
-		FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06EBAB1B162F70007EEDB3 /* PrimeFactorsGenerator.swift */; };
 		FF50CFC81B17C97A002FA38B /* MockPrimeFactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50CFC71B17C97A002FA38B /* MockPrimeFactorsGenerator.swift */; };
 		FF50CFCA1B17C99A002FA38B /* MockUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50CFC91B17C99A002FA38B /* MockUITableView.swift */; };
 		FF858E721B161328001EDB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF858E711B161328001EDB59 /* AppDelegate.swift */; };
@@ -21,13 +19,10 @@
 		FF858E791B161328001EDB59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF858E781B161328001EDB59 /* Images.xcassets */; };
 		FF858E7C1B161328001EDB59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF858E7A1B161328001EDB59 /* LaunchScreen.xib */; };
 		FFCE23451B1FB6D4003DECB9 /* LabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE23441B1FB6D4003DECB9 /* LabelManager.swift */; };
-		FFCE23461B1FB6D4003DECB9 /* LabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE23441B1FB6D4003DECB9 /* LabelManager.swift */; };
 		FFCE23481B1FB73D003DECB9 /* MockErrorLabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE23471B1FB73D003DECB9 /* MockErrorLabelManager.swift */; };
 		FFD417871B1FA12000E32E59 /* ErrorLabelManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD417851B1FA12000E32E59 /* ErrorLabelManagerSpec.swift */; };
 		FFD417891B1FA38F00E32E59 /* ErrorLabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD417881B1FA38F00E32E59 /* ErrorLabelManager.swift */; };
-		FFD4178A1B1FA38F00E32E59 /* ErrorLabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD417881B1FA38F00E32E59 /* ErrorLabelManager.swift */; };
 		FFF802271B1654F40070D501 /* FactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF802261B1654F40070D501 /* FactorsGenerator.swift */; };
-		FFF802281B1654F40070D501 /* FactorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF802261B1654F40070D501 /* FactorsGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,14 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF50CFC81B17C97A002FA38B /* MockPrimeFactorsGenerator.swift in Sources */,
-				FF06EBAD1B162F70007EEDB3 /* PrimeFactorsGenerator.swift in Sources */,
 				FF50CFCA1B17C99A002FA38B /* MockUITableView.swift in Sources */,
 				FF06EBAA1B162D7B007EEDB3 /* PrimeFactorsGeneratorSpec.swift in Sources */,
-				FFCE23461B1FB6D4003DECB9 /* LabelManager.swift in Sources */,
-				FFD4178A1B1FA38F00E32E59 /* ErrorLabelManager.swift in Sources */,
 				FF06EBA21B161984007EEDB3 /* MainViewControllerSpec.swift in Sources */,
-				FFF802281B1654F40070D501 /* FactorsGenerator.swift in Sources */,
-				FF06EBA71B161CAD007EEDB3 /* MainViewController.swift in Sources */,
 				FFCE23481B1FB73D003DECB9 /* MockErrorLabelManager.swift in Sources */,
 				FFD417871B1FA12000E32E59 /* ErrorLabelManagerSpec.swift in Sources */,
 			);

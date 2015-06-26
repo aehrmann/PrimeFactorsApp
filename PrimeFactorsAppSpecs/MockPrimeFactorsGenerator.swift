@@ -1,4 +1,5 @@
 import Foundation
+import PrimeFactorsApp
 
 class MockPrimeFactorsGenerator: FactorsGenerator {
     var generateWasCalled: Bool
