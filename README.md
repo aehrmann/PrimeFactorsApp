@@ -3,7 +3,7 @@
 This project is a simple prime factors generator, used as an exercise in 
 test-driven iOS development. Together, [Lisa Hamm](http://www.lisahamm.com/)
 and I pair-programmed the app using the [Quick](https://github.com/Quick/Quick)
-unit testing framework and [Nimble](https://github.com/Quick/Nimble), it's associated matcher library.
+unit testing framework and [Nimble](https://github.com/Quick/Nimble), its associated matcher library.
 
 
 ## Here's how to get it running:
@@ -17,6 +17,8 @@ unit testing framework and [Nimble](https://github.com/Quick/Nimble), it's assoc
 #### Running tests
 	After opening PrimeFactorsApp.xcworkspace in XCode:
 		select Product > Test (or Cmd-U) from the application menu
+
+_Note: tests are currently not passing because the app was developed with older versions of Swift, XCode, and Quick_
 
 ### Version Information
 	- XCode version 6.4 (6E35b)

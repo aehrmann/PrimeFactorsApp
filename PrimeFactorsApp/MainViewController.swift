@@ -27,8 +27,8 @@ public class MainViewController: UIViewController, UITableViewDataSource {
 
     private func processInput() {
         let currentInput = numberTextField.text
-        inputValidator?.update(currentInput)
-        generatedFactors = factorsFor(currentInput)
+        inputValidator?.update(currentInput!)
+        generatedFactors = factorsFor(currentInput!)
     }
 
     private func reloadTableData() {
@@ -37,7 +37,7 @@ public class MainViewController: UIViewController, UITableViewDataSource {
     }
 
     private func factorsFor(inputString: String) -> [Int] {
-        if let integerValue = inputString.toInt() {
+        if let integerValue = Int(inputString) {
             inputAsInteger = integerValue
             return generator!.generate(inputAsInteger!)
         } else {

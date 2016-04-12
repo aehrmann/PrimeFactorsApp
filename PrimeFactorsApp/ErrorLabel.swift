@@ -11,7 +11,7 @@ public class ErrorLabel: UILabel, ErrorMessageView {
 
     private let characterLimit = 12
 
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
     }
 
@@ -25,18 +25,18 @@ public class ErrorLabel: UILabel, ErrorMessageView {
 
     public func inputWasInvalid(userInput: String) {
         hidden = false
-        text = createErrorMessage(userInput)
+        text = createErrorMessage(inputString: userInput)
     }
 
-    private func createErrorMessage(inputString: String) -> String {
+    private func createErrorMessage(inputString inputString: String) -> String {
         let displayString = formatForDisplay(inputString: inputString)
         return "\"\(displayString)\" is not an integer"
     }
 
-    private func formatForDisplay(#inputString: String) -> String {
+    private func formatForDisplay(inputString inputString: String) -> String {
         var displayString = inputString
-        if count(inputString) >= self.characterLimit {
-            let substringRange = Range(start: inputString.startIndex, end: advance(inputString.startIndex, self.characterLimit))
+        if inputString.characters.count >= self.characterLimit {
+            let substringRange = inputString.startIndex ..< inputString.startIndex.advancedBy(self.characterLimit)
             displayString = inputString.substringWithRange(substringRange) + "..."
         }
         return displayString

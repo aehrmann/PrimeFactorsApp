@@ -8,7 +8,7 @@ public class DefaultInputValidator: InputValidator {
     }
 
     public func update(userInput: String) {
-        if userInput.toInt() != nil || userInput.isEmpty {
+        if Int(userInput) != nil || userInput.isEmpty {
             view.inputWasValid()
         } else {
             view.inputWasInvalid(userInput)
